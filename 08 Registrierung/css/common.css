@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400italic,300,500,500italic,700,700italic,300italic&display=swap');
+
+* {
+	box-sizing:border-box;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+form, form input, form label, form select, form textarea {
+	display:block;
+}
+form {
+	max-width:50em;
+	padding:1em;
+	margin:auto;
+	margin-bottom:2em;
+	border-radius:3px;
+	border:1px solid #ccc;
+	background-color:#fff;
+}
+form.wide {
+	max-width:71.25em;
+}
+
+form input, form select, form textarea {
+	margin-top:0px;
+	margin-bottom:0.8em;
+	padding:1em;
+	padding-top:0.3em;
+	padding-bottom:0.3em;
+	border-radius:3px;
+	border:1px solid #ccc;
+	width:100%;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+	border-color:#333;
+	color:#23527c;
+}
+
+form input[type=submit], #btnLogout {
+	border-radius:5px;
+	border:none;
+	background-color:#23527c;
+	color:#fff;
+}
+form input[type=submit]:focus, form input[type=submit]:hover, #btnLogout:focus, #btnLogout:hover, #btnLoad:focus, #btnLoad:hover {
+	color:#ccc;
+}
+
+form fieldset {
+	border-radius:5px;
+	border:1px solid #999;
+    margin-bottom:1em;
+}
+
+
+label[data-required] {
+	font-weight:bold;
+}
+
+form label input {
+	display:inline-block;
+}
+
+form input[type=radio], form input[type=checkbox] {
+	width:auto;
+}
+
+table {
+	border-collapse:collapse;
+	border:2px solid #ccc;
+	margin:auto;
+	margin-bottom:1em;
+	margin-top:1em;
+	width:100%;
+}
+td, th {
+	border:1px solid #eee;
+	padding:1em;
+	vertical-align: top;
+}
+
+.ta {
+	margin:1em 0px;
+	border:1px solid orange;
+	background-color:#ffc;
+	border-left-width:0.5em;
+	padding:0.2em 0.5em;
+}
+
+.msg {
+	margin-top:1em;
+	margin-bottom:1em;
+	border-left:5px solid #fff;
+	padding-left:1em;
+}
+.success {
+	border-left-color:#0C0;
+	font-style:italic;
+}
+.error {
+	border-left-color:#C00;
+	font-weight:bold;
+}
+
+.dir {
+	font-weight:bold;
+}
+.file {
+	font-style:italic;
+	font-weight:normal;
+}
+
+nav {
+	padding-bottom:0.5em;
+	border-bottom:1px solid #eee;
+	margin-bottom:1em;
+}
+nav ul,
+nav li {
+	display:block;
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+nav ul {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	gap:0.5em;
+}
+nav li {
+	border-radius:0.2em;
+	padding:0.5em 1em;
+	line-height:1em;
+	background-color:#eee;
+}
+nav a {
+	text-decoration:none;
+	color:#333;
+	display:block;
+	width:100%;
+	height:100%;
+}
+nav li:hover {
+	background-color:#333;
+}
+nav li:hover a {
+	color:white;
+}

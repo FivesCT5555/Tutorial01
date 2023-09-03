@@ -1,0 +1,10 @@
+.profilbild {
+    display:block;
+    width:10em;
+    aspect-ratio:1;
+    object-fit:cover;
+    object-position:center;
+    border-radius:50%;
+    padding:3px;
+    border:1px solid grey;
+}
