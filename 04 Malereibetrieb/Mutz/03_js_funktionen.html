@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>JS: Funktionen</title>
+		<meta charset="utf-8">
+		<script>
+		function f0() {
+			//Funktion ohne Übergabevariablen und ohne Rückgabewert
+			let a = 17, b = 23, c;
+			c = a+b;
+			console.log("f0: c=",c);
+		}
+		
+		function f1(a,b) {
+			//Funktion mit zwei Übergabevariablen (a,b), jedoch ohne Rückgabewert
+			let c;
+			c = a+b;
+			console.log("f1: c=",c);
+		}
+		
+		function f2() {
+			//Funktion ohne Übergabevariablen, jedoch mit Rückgabewert
+			let a = 17, b = 23, c;
+			c = a+b;
+			console.log("f2: c=",c);
+			
+			return c;
+			
+			console.log("Ich bin auch noch da!"); //wird nicht ausgeführt, da sich dieser Code unterhalb des return befindet
+		}
+		
+		function f3(a,b) {
+			//Funktion mit Übergabevariablen und mit Rückgabewert
+			let c;
+			c = a+b;
+			console.log("f3: c=",c);
+			
+			return c;
+		}
+		
+		function f4(a,b,c=1) {
+			let d;
+			d = 2*a+b/c;
+			console.log("f4: d=",d);
+		
+			return d;
+		}
+		
+		function f5(a,b,...c) {
+			console.log("a=",a);
+			console.log("b=",b);
+			console.log("c=",c);
+		}
+		
+		function f6(...c) {
+			//erzeuge die Summe sowie den Mittelwert aller an die Funktion übergebenen Werte; liefere das Ergebnis an den Aufrufer zurück
+			
+			let a = 0;
+			for(let i=0; i<c.length; i++) {
+				a+= c[i]; //a = a+c[i]
+			}
+			
+			return [a,a/c.length];
+		}
+		</script>
+	</head>
+	<body>
+		<script>
+		f0(); //Aufruf der Funktion f0
+		f0();
+		//console.log("ausserhalb von f0: c=",c); //nicht möglich, da c eine lokale Variable innerhalb der Funktion f0 ist
+		
+		f1(17,23); //Aufruf der Funktion f1 mit den Übergabewerten 17 und 23
+		f1(18,24);
+		
+		let erg0 = f2(); //Aufruf der Funktion f2
+		console.log("erg f2: erg0=",erg0);
+		
+		let erg1 = f3(17,23);
+		console.log("erg f3: erg1=",erg1);
+		
+		let erg2 = f4(2,4,5);
+		console.log("erg f4: erg2=",erg2);
+		
+		let erg3 = f4(2,4);
+		console.log("erg f4: erg3=",erg3);
+		
+		f5(2,4);
+		f5(2,4,5);
+		f5(2,4,5,6,9,12,-23);
+		
+		f5(2,4,5,6,[12,-23,"xxx",true],10,19,"abc");
+		
+		let erg4 = f6(2,4,6,8,-5,22);
+		console.log("erg4=",erg4);
+		</script>
+	</body>
+</html>

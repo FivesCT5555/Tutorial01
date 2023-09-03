@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>Dezimal vs. Binär</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+		var a = 0.1, b = 0.2, c;
+		c = a+b;
+		console.log("c=",c);
+		
+		let vn = prompt("Bitte geben Sie Ihren Vornamen ein:");
+		if(vn=="Uwe") {
+			console.log("Hallo Uwe");
+		}
+		else {
+			if(vn=="Sabine") {
+				console.log("Hi Sabine");
+			}
+			else {
+				if(vn=="Alex") {
+					console.log("Hey Alex");
+				}
+				else {
+					console.log("Hi Unbekannte(r)");
+				}
+			}
+		}
+		
+		switch(vn) {
+			case "Uwe":
+				console.log("Hallo Uwe");
+				break;
+			case "Sabine":
+				console.log("Hi Sabine");
+				break;
+			case "Alex":
+				console.log("Hey Alex");
+				break;
+			default:
+				console.log("Hi Unbekannte(r)");
+		}
+		
+		let z = parseFloat(prompt("Bitte geben Sie eine Zahl ein"));
+		if(z<10) {
+			console.log("kleine Zahl");
+		}
+		else {
+			if(z<50) {
+				console.log("mittlere Zahl");
+			}
+			else {
+				if(z<100) {
+					console.log("mittelgroße Zahl");
+				}
+				else {
+					console.log("große Zahl");
+				}
+			}
+		}
+		
+		switch(true) {
+			case z<10:
+				console.log("kleine Zahl");
+				break;
+			case z<50:
+				console.log("mittlere Zahl");
+				break;
+			case z<100:
+				console.log("mittelgroße Zahl");
+				break;
+			default:
+				console.log("große Zahl");
+		}
+		</script>
+	</body>
+</html>

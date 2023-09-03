@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>JS: DOM (Document Object Model)</title>
+		<meta charset="utf-8">
+		<style>
+		img {
+			display:inline-block;
+			width:10em;
+			height:10em;
+			object-fit:cover;
+			object-position:center;
+		}
+		</style>
+		<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			console.log("DOM geladen");
+			const pic = document.querySelector("#pic0"); //Verweis auf das Element mit der ID "pic0", gespeichert in einer Variable
+			const p = document.querySelector("#p0");
+			
+			pic.addEventListener("mouseover", function() {
+				document.querySelector('#pic0').src = 'images/bild0.jpg';
+			}); //Funktionszuweisung, KEIN Funktionsaufruf
+			pic.addEventListener("mouseout", function() {
+				document.querySelector('#pic0').src = 'images/bild1.jpg';
+			});
+			pic.addEventListener("click", function() {
+				document.querySelector('#pic0').src = 'images/bild2.jpg';
+				document.querySelector('#pic0').alt='Baum';
+			});
+			
+			p.addEventListener("click", function() {
+				//anonyme Funktion, die nur für diesen einen Fall benötigt wird
+				document.querySelector('#p0').innerHTML = 'Neuer Text';
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<img src="images/bild1.jpg" alt="Eiffelturm" id="pic0">
+		<p id="p0">Hallo Welt!</p>
+	</body>
+</html>

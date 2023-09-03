@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>JS: DOM (Document Object Model)</title>
+		<meta charset="utf-8">
+		<style>
+		img {
+			display:inline-block;
+			width:10em;
+			height:10em;
+			object-fit:cover;
+			object-position:center;
+		}
+		</style>
+	</head>
+	<body>
+		<img src="images/bild1.jpg" alt="Eiffelturm" id="pic0" onmouseover="document.querySelector('#pic0').src = 'images/bild0.jpg';" onmouseout="document.querySelector('#pic0').src = 'images/bild1.jpg';" onclick="document.querySelector('#pic0').src = 'images/bild2.jpg'; document.querySelector('#pic0').alt='Baum';">
+
+		<p id="p0" onclick="document.querySelector('#p0').innerHTML = 'Neuer Text';">Hallo Welt!</p>
+		
+		<script>
+		
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>JS: DOM (Document Object Model)</title>
+		<meta charset="utf-8">
+		<style>
+		img {
+			display:inline-block;
+			width:10em;
+			height:10em;
+			object-fit:cover;
+			object-position:center;
+		}
+		</style>
+	</head>
+	<body>
+		<img src="images/bild1.jpg" alt="Eiffelturm">
+		<img src="images/bild0.jpg" alt="Leo">
+		
+		<p id="a">Hallo Welt!</p>
+		<div id="b"></div>
+
+		<script>
+		document.querySelector("img").src = "images/bild2.jpg"; //eindeutig, da querySelector auch bei Arrays immer auf das erste Element zugreift
+		document.querySelectorAll("img")[1].src = "images/bild2.jpg"; //eindeutig, da querySelector auch bei Arrays immer auf das erste Element zugreift
+		
+		document.querySelector("img").title = "Das ist ein Baum hinter einem See, fotografiert in einer Dämmerstimmung";
+		
+		document.querySelector("#a").innerHTML = "Neuer <strong>Text</strong>";
+		document.querySelector("#b").innerHTML = '<p>Hallo Welt!</p><img src="images/bild1.jpg" alt="...">';
+		</script>
+		
+	</body>
+</html>

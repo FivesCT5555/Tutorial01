@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>Schleifen</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+		/*
+		// for-Schleife:
+		for(let i=0; i<10; i++) {
+			console.log("i=",i);
+		}
+		//console.log("letzter Wert von i:",i);
+		
+		for(let i=100; i>=0; i-=3) {
+			console.log("i=",i);
+		}
+		
+		for(let i=0; i<10; i++) {
+			console.log("*i=",i);
+			for(let j=0; j<20; j++) {
+				//beachte: auch wenn es mit let-Deklaration möglich ist, in verschachtelten Schleifen dieselbe Schleifenvariable (i) zu verwenden, sollte man es nicht tun
+				console.log("j=",j);
+			}
+		}
+		*/
+		
+		// while-Schleife:
+		let z = Math.random(); //erzeugt eine Zufallszahl zw. 0 und 1, wobei 1 nicht erreicht werden kann ([0,1[ --> alle Werte zw. inkl. 0 und exkl. 1)
+		console.log("(1) z=",z);
+		while(z<0.8) {
+			z = Math.random();
+			console.log("(2) z=",z);
+		}
+		console.log("(3) z=",z);
+		console.log("----");
+		
+		// do-while Schleife:
+		let z2;
+		do {
+			z2 = Math.random();
+			console.log("(2) z2=",z2);
+		} while(z2<0.8);
+		console.log("(3) z2=",z2);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<title>Arrays &amp; Objekte</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+		// Arrays:
+		let a0 = [];
+		console.log(a0);
+		a0[3] = 7;
+		console.log(a0);
+		a0[6] = 4*a0[3]-2;
+		console.log(a0);
+		
+		let a1 = [3];
+		console.log(a1);
+		let a2 = new Array(3);
+		console.log(a2);
+		
+		let a3 = [2,4,6,"xxx"];
+		console.log(a3);
+		let a4 = new Array(2,4,6,"xxx");
+		console.log(a4);
+		
+		a0[4] = [-1,-2,"Uwe",true,17];
+		console.log(a0);
+		console.log("Länge des Arrays a0:",a0.length,"Länge des Arrays an der Stelle 4 in a0:",a0[4].length);
+		
+		let eintrag = a3[2];
+		console.log(eintrag);
+		
+		let j = 3;
+		eintrag = a3[j];
+		console.log(eintrag);
+		
+		
+		for(let i=0; i<a3.length; i++) {
+			//sämtliche Einträge in a3
+			console.log(a3[i]);
+		}
+		for(let i=a3.length-1; i>=0; i--) {
+			//sämtliche Einträge in a3 in umgekehrter Reihenfolge
+			console.log(a3[i]);
+		}
+		for(let i=0; i<a3.length; i+=2) {
+			//jeder zweite Eintrag im Array a3
+			console.log(a3[i]);
+		}
+		
+		// Objekte:
+		let o = {};
+		o["vn"] = "Uwe";
+		console.log(o);
+		o.nn = "Mutz";
+		console.log(o);
+		
+		let o2 = {
+			vn: "Uwe",
+			nn: "Mutz"
+		};
+		console.log(o2);
+		</script>
+	</body>
+</html>
